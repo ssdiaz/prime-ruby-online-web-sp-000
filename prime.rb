@@ -4,22 +4,16 @@
 #     Prime.prime?(integer)
 #   end
 
-
 #My thought process:
   def prime? (integer)
-    # create array of 1 to integer
-    range_check = (1...integer+1).to_a
-    # create empty array to store results
-    divisable_number = []
+    range_check = (1...integer+1).to_a   # create array of 1 to integer
+    divisable_number = []                # create empty array to store results
 
-    #iterate to see if integer is divisibale by range_check numbers
-      range_check.select do |num|
+      range_check.select do |num|        #iterate to see if integer is divisibale by range_check numbers
         if integer % num == 0
-          # if so, add into divisable_number array
-          divisable_number << "yes"
+          divisable_number << "yes"      # if so, add into divisable_number array
         end
       end
 
-    #count if array has only 2 numbers divisibale. If yes, then Prime number
-    divisable_number.length == 2 ? true : false
+    divisable_number.length == 2 ? true : false  #count if array has only 2 numbers divisibale. If yes, then Prime number
    end
