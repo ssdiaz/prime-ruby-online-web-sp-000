@@ -12,14 +12,14 @@
     # create empty array to store results
     divisable_number = []
 
-    #iterate to see if integer is divisibale by range_check numbers 
-      range_check.select do |num|  
+    #iterate to see if integer is divisibale by range_check numbers
+      range_check.select do |num|
         if integer % num == 0
           # if so, add into divisable_number array
           divisable_number << "yes"
         end
       end
-    
+
     #count if array has only 2 numbers divisibale. If yes, then Prime number
     divisable_number.length == 2 ? true : false
    end
